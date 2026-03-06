@@ -1,0 +1,3 @@
+The projects development started with implementing stacks and operationg capable from pushing to one to another. As the fundemantal building block of the projects mechanics, all other opreations emerged from this simple step. 
+
+After coding the operations the stack initialization system was built taking the arguments and turning them to integers which can be used to create the nodes. A checker function calls subfunctions to check for each possible error case: duplicates, 
