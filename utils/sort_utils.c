@@ -15,7 +15,7 @@ int distance(t_stack_node **b, int (*f)(t_stack_node **stack))
     return (distance);
 }
 
-void bring_back_home(t_stack_node **a, t_stack_node **b)
+void go_home(t_stack_node **a, t_stack_node **b)
 {
     int distance_from_top;
     int distance_from_bottom;

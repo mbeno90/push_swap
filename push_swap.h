@@ -42,7 +42,7 @@ void find_index(t_stack_node **stack);
 int is_sorted(t_stack_node **a);
 int	chunk_size(int ac);
 void sort(t_stack_node **a, t_stack_node **b, int argc);
-void bring_back_home(t_stack_node **a, t_stack_node **b);
+void go_home(t_stack_node **a, t_stack_node **b);
 int distance(t_stack_node **b, int (*f)(t_stack_node **stack));
 
 //Algorhythm - Sorting Low Argc Count

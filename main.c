@@ -15,6 +15,6 @@ int	main(int argc, char **argv)
 	find_index(&a);
 	sort(&a, &b, stack_size(&a));
 	while (b)
-		bring_back_home(&a, &b);
+		go_home(&a, &b);
 	//print_stack(a);
 }
