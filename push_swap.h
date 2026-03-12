@@ -6,7 +6,7 @@
 /*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:31:06 by bmorvai           #+#    #+#             */
-/*   Updated: 2026/03/12 13:35:56 by bmorvai          ###   ########.fr       */
+/*   Updated: 2026/03/12 18:02:00 by bmorvai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void					add(int value, t_stack_node **a);
 void					print_stack(t_stack_node *stack);
 void					print_index(t_stack_node *stack);
 int						stack_size(t_stack_node **stack);
+void					free_stack(t_stack_node **stack);
 
 // Libft Utilities
 int						ft_atoi(const char *nptr);

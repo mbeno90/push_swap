@@ -6,7 +6,7 @@
 /*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:33:36 by bmorvai           #+#    #+#             */
-/*   Updated: 2026/03/12 13:33:44 by bmorvai          ###   ########.fr       */
+/*   Updated: 2026/03/12 18:04:25 by bmorvai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ int	main(int argc, char **argv)
 	sort(&a, &b, stack_size(&a));
 	while (b)
 		go_home(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
 }

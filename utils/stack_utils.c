@@ -6,7 +6,7 @@
 /*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:33:29 by bmorvai           #+#    #+#             */
-/*   Updated: 2026/03/12 13:35:34 by bmorvai          ###   ########.fr       */
+/*   Updated: 2026/03/12 18:08:05 by bmorvai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,19 @@ int	stack_size(t_stack_node **stack)
 		temp = temp->next;
 	}
 	return (size);
+}
+
+void	free_stack(t_stack_node **stack)
+{
+	t_stack_node	*current;
+	t_stack_node	*next;
+
+	current = *stack;
+	while (current)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	*stack = NULL;
 }
