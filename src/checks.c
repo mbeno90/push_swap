@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void check_numeric(char *argument)
 {
@@ -10,17 +10,20 @@ void check_numeric(char *argument)
     while(argument[i])
     {
         if (!ft_isdigit(argument[i]))
-            return (0);
+        {   
+            write(2, "Error\n", 6);
+            exit (1);
+        }
         i++;
     }
-    return (1);
 }
 void check_overflow(long number)
 {
-    printf("checking: %ld\n", number);
 	if (INT_MIN > number || number > INT_MAX)
-    	return (0);
-    return (1);
+    	{   
+            write(2, "Error\n", 6);
+            exit (1);
+        }
 }
 
 void check_duplicates(t_stack_node **stack)
@@ -36,10 +39,12 @@ checker = current->next;
     while(checker)
     {
     if(checker-> value == current->value)
-        return (0);
+        {   
+            write(2, "Error\n", 6);
+            exit (1);
+        }
     checker = checker->next;
     }
 current =  current->next;
 }
-return (1);
 }
