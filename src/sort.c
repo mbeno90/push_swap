@@ -1,43 +1,55 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/12 13:33:17 by bmorvai           #+#    #+#             */
+/*   Updated: 2026/03/12 13:37:19 by bmorvai          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
-void big_sort(t_stack_node **a, t_stack_node **b, int argc)
+void	big_sort(t_stack_node **a, t_stack_node **b, int argc)
 {
-    int num;
-    int pushcount;
+	int	num;
+	int	pushcount;
 
-    num = chunk_size(argc);
-    pushcount = 0;
-    while(*a)
+	num = chunk_size(argc);
+	pushcount = 0;
+	while (*a)
 	{
-    	if ((*a)->index <= pushcount)
-    	{
-        	pb(a, b);
+		if ((*a)->index <= pushcount)
+		{
+			pb(a, b);
 			pushcount++;
-        	if (stack_size(b) > 1)
-            	rb(b);
-    	}
-    	else if ((*a)->index <= pushcount + num)
-    	{
-    	    pb(a, b);
-    	    pushcount++;
-    	}
-    	else
-    	    ra(a);
+			if (stack_size(b) > 1)
+				rb(b);
+		}
+		else if ((*a)->index <= pushcount + num)
+		{
+			pb(a, b);
+			pushcount++;
+		}
+		else
+			ra(a);
 	}
 }
 
-void sort(t_stack_node **a, t_stack_node **b, int argc)
+void	sort(t_stack_node **a, t_stack_node **b, int argc)
 {
-    if (argc == 2)
-        sort_two(a);
-    else if (argc == 3)
-        sort_three(a, b);
-    else if (argc == 4)
-        sort_four(a, b);
-    else if (argc == 5)
-        sort_five(a, b);
-    else
-        big_sort(a, b, argc);
+	if (argc == 2)
+		sort_two(a);
+	else if (argc == 3)
+		sort_three(a, b);
+	else if (argc == 4)
+		sort_four(a, b);
+	else if (argc == 5)
+		sort_five(a, b);
+	else
+		big_sort(a, b, argc);
 }
 
 int	chunk_size(int ac)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/12 13:31:41 by bmorvai           #+#    #+#             */
+/*   Updated: 2026/03/12 15:41:38 by bmorvai          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 static char	*ft_findstart(char const *s, char c)
@@ -7,7 +19,7 @@ static char	*ft_findstart(char const *s, char c)
 	char	*start;
 
 	i = 0;
-	ts = (char *) s;
+	ts = (char *)s;
 	while (ts[i])
 	{
 		if (ts[i] != c)
@@ -48,7 +60,7 @@ static char	*ft_findend(char const *s, char c)
 	char	*end;
 
 	i = 0;
-	ts = (char *) s;
+	ts = (char *)s;
 	while (ts[i])
 	{
 		if (ts[i] == c)
@@ -108,7 +120,7 @@ char	**ft_split(char const *s, char c)
 			return (free(ptr), NULL);
 		}
 		i++;
-		start = ft_findstart(end +1, c);
+		start = ft_findstart(end + 1, c);
 	}
 	return (ptr);
 }

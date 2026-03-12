@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/12 13:33:36 by bmorvai           #+#    #+#             */
+/*   Updated: 2026/03/12 13:33:44 by bmorvai          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	main(int argc, char **argv)
@@ -8,7 +20,6 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	init_stacks(argc, argv, &a);
-	//print_stack(a);
 	if (is_sorted(&a))
 		return (0);
 	find_min(&a);
@@ -16,5 +27,4 @@ int	main(int argc, char **argv)
 	sort(&a, &b, stack_size(&a));
 	while (b)
 		go_home(&a, &b);
-	//print_stack(a);
 }
