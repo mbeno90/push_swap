@@ -6,7 +6,7 @@
 /*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:33:22 by bmorvai           #+#    #+#             */
-/*   Updated: 2026/03/12 13:47:39 by bmorvai          ###   ########.fr       */
+/*   Updated: 2026/03/18 09:08:50 by bmorvai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 void	sa(t_stack_node **a)
 {
-	t_stack_node	*tmp;
+	int	tmp;
 
-	tmp = (*a)->next;
-	(*a)->next = *a;
-	*a = tmp;
+	tmp = (*a)->value;
+	(*a)->value = (*a)->next->value;
+	(*a)->next->value = tmp;
 	write(1, "sa\n", 3);
 }
 
 void	sb(t_stack_node **b)
 {
-	t_stack_node	*tmp;
+	int	tmp;
 
-	tmp = (*b)->next;
-	(*b)->next = *b;
-	*b = tmp;
+	tmp = (*b)->value;
+	(*b)->value = (*b)->next->value;
+	(*b)->next->value = tmp;
 	write(1, "sb\n", 3);
 }
 

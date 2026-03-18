@@ -6,7 +6,7 @@
 /*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:31:06 by bmorvai           #+#    #+#             */
-/*   Updated: 2026/03/12 18:02:00 by bmorvai          ###   ########.fr       */
+/*   Updated: 2026/03/18 09:18:16 by bmorvai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void					print_stack(t_stack_node *stack);
 void					print_index(t_stack_node *stack);
 int						stack_size(t_stack_node **stack);
 void					free_stack(t_stack_node **stack);
+void					free_args(char **args);
 
 // Libft Utilities
 int						ft_atoi(const char *nptr);
@@ -40,9 +41,9 @@ void					*ft_calloc(size_t nmemb, size_t size);
 void					*ft_bzero(void *s, size_t n);
 
 // Error checks
-void					check_duplicates(t_stack_node **stack);
-void					check_overflow(long number);
-void					check_numeric(char *argument);
+void					check_duplicates(t_stack_node **stack, char **args, int argc);
+void					check_overflow(long number, t_stack_node **a, char **args, int argc);
+void					check_numeric(char *argument, t_stack_node **a, char **args, int argc);
 
 // Algorhythm - Indexing - Searching;
 int						find_min(t_stack_node **stack);
@@ -63,7 +64,7 @@ void					sort_two(t_stack_node **a);
 void					sort_three(t_stack_node **a, t_stack_node **b);
 void					sort_three_low(t_stack_node **a, t_stack_node **b,
 							int second, int third);
-void					sort_three_mid(t_stack_node **a, t_stack_node **b,
+void					sort_three_mid(t_stack_node **a,
 							int first, int second);
 void					sort_three_high(t_stack_node **a, t_stack_node **b,
 							int first, int second);

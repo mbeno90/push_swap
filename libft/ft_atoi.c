@@ -6,7 +6,7 @@
 /*   By: bmorvai <bmorvai@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:31:16 by bmorvai           #+#    #+#             */
-/*   Updated: 2026/03/12 13:46:52 by bmorvai          ###   ########.fr       */
+/*   Updated: 2026/03/16 10:10:41 by bmorvai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (*nptr - '0');
 		nptr++;
 	}
-	check_overflow(sign * result);
 	return (sign * result);
 }
